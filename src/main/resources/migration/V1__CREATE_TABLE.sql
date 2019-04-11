@@ -1,0 +1,63 @@
+
+CREATE TABLE DICT_SERVICE
+(
+  service_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  service_name CHAR(32),
+  export_type TINYINT UNSIGNED,
+  export_url VARCHAR(100),
+  created_at DATETIME,
+  updated_at DATETIME,
+  active TINYINT,
+  enable TINYINT,
+  writer VARCHAR(16),
+  modifier VARCHAR(16),
+  `DESC` VARCHAR(256),
+  PRIMARY KEY(service_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE DICT_ITEM
+(
+  item_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  no_0 VARCHAR(256),
+  no_1 VARCHAR(256),
+  no_2 VARCHAR(256),
+  no_3 VARCHAR(256),
+  no_4 VARCHAR(256),
+  no_5 VARCHAR(256),
+  no_6 VARCHAR(256),
+  no_7 VARCHAR(256),
+  no_8 VARCHAR(256),
+  no_9 VARCHAR(256),
+  created_at DATETIME,
+  updated_at DATETIME,
+  active TINYINT,
+  enable TINYINT,
+  writer VARCHAR(16),
+  modifier VARCHAR(16),
+  `DESC` VARCHAR(256),
+  PRIMARY KEY(item_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE DICT_GROUP
+(
+  service_id SMALLINT UNSIGNED NOT NULL,
+  item_id INT UNSIGNED NOT NULL,
+  group_cd INT,
+  parents_group_cd INT,
+  depth TINYINT UNSIGNED,
+  created_at DATETIME,
+  updated_at DATETIME,
+  active TINYINT,
+  enable TINYINT,
+  writer VARCHAR(16),
+  modifier VARCHAR(16),
+  `DESC` VARCHAR(256),
+  FOREIGN KEY (service_id)
+    REFERENCES DICT_SERVICE(service_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+  FOREIGN KEY (item_id)
+    REFERENCES DICT_ITEM(item_id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
