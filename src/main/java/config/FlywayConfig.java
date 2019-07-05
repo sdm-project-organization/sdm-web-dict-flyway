@@ -4,7 +4,7 @@ import org.flywaydb.core.Flyway;
 
 public class FlywayConfig {
 
-    public static final String HOST = "13.125.130.224:10001";
+    public static final String HOST = "210.90.135.104:10002";
     public static final String SCHEMA = "DICT";
     public static final String ID = "root";
     public static final String PW = "root";
