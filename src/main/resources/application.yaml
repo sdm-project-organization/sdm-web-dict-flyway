@@ -1,0 +1,9 @@
+
+migration:
+  # mo dev
+  url: 52.79.207.63
+  port: 3306
+  schema: dict
+  username: root
+  password: root
+  location: classpath:migration

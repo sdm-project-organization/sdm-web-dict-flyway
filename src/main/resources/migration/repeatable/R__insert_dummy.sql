@@ -1,16 +1,16 @@
 -- INSERT DICT_PLATFORM_TB (Without PK)
--- INSERT INTO DICT.DICT_PLATFORM_TB (disp_nm, disp_ord, created_dt, updated_dt, active_fl, enable_fl, writer, editor, `desc`) VALUES
+-- INSERT INTO dict.DICT_PLATFORM_TB (disp_nm, disp_ord, created_dt, updated_dt, active_fl, enable_fl, writer, editor, `desc`) VALUES
 -- ("platformA", 1, NOW(), NOW(), 1, 1, "sdm", "sdm", "");
 
 -- INSERT DICT_SERVICE (Without PK)
-INSERT INTO DICT.DICT_PARTITION_TB(service_sq, export_type, export_url, disp_nm, disp_ord, created_dt, updated_dt,
+INSERT INTO dict.DICT_PARTITION_TB(service_sq, export_type, export_url, disp_nm, disp_ord, created_dt, updated_dt,
 active_fl, enable_fl, writer, editor, `desc`)
 VALUES (1, 1, "http://google.com/repository", "partitionA", 1, NOW(), NOW(), 1, 1, "sdm", "sdm", ""),
 (1, 1, "http://google.com/repository", "partitionB", 2, NOW(), NOW(), 1, 1, "sdm", "sdm", ""),
 (1, 1, "http://google.com/repository", "partitionC", 3, NOW(), NOW(), 1, 1, "sdm", "sdm", "");
 
 -- -- INSERT DICT_TREE_TB (Without PK)
-INSERT INTO DICT.DICT_TREE_TB(partition_sq, tree_cd, tree_path, tree_level, disp_nm, disp_ord, created_dt, updated_dt,
+INSERT INTO dict.DICT_TREE_TB(partition_sq, tree_cd, tree_path, tree_level, disp_nm, disp_ord, created_dt, updated_dt,
 active_fl, enable_fl, writer, editor, `desc`)
 VALUES (1, 1, "1", 1, "treeA", 1, NOW(), NOW(), 1, 1, "sdm", "sdm", ""),
 (1, 2, "2", 1, "treeB", 1, NOW(), NOW(), 1, 1, "sdm", "sdm", ""),
@@ -29,7 +29,7 @@ VALUES (1, 1, "1", 1, "treeA", 1, NOW(), NOW(), 1, 1, "sdm", "sdm", ""),
 (1, 15, "2.6.15", 3, "treeA", 1, NOW(), NOW(), 1, 1, "sdm", "sdm", "");
 
 -- -- INSERT DICT_node_TB (Without PK)
-INSERT INTO DICT.DICT_NODE_TB(partition_sq, tree_sq, txt0, txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, disp_nm
+INSERT INTO dict.DICT_NODE_TB(partition_sq, tree_sq, txt0, txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, disp_nm
 , disp_ord, created_dt, updated_dt, active_fl, enable_fl, writer, editor, `desc`)
 VALUES (1, 7, "node1", "한국어", "English", "日本", "中国", "", "", "", "", "", "nodeA", 1, NOW(), NOW(), 1, 1, "sdm", "sdm",
 ""),
