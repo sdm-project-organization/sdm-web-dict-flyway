@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class DictFlywayApplication extends SpringBootServletInitializer {
+public class DictFlywayApplication /* [springboot-web] extends SpringBootServletInitializer */ {
 
     public static void main(String[] args) {
         SpringApplication.run(DictFlywayApplication.class, args);
