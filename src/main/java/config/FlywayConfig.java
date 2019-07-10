@@ -4,10 +4,10 @@ import org.flywaydb.core.Flyway;
 
 public class FlywayConfig {
 
-    public static final String HOST = "210.90.135.104:10002";
+    public static final String HOST = "localhost:3306";
     public static final String SCHEMA = "DICT";
     public static final String ID = "root";
-    public static final String PW = "root";
+    public static final String PW = "1234";
     public static final String LOCATION = "classpath:migration";
 
     public static Flyway getFlyway() {
