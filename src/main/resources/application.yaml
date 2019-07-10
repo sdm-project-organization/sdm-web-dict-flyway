@@ -1,0 +1,8 @@
+
+flyway:
+   url: "210.90.135.104"
+   port: 210.90.135.104
+   schema: DICT
+   username: root
+   password: root
+   location: classpath:migration
