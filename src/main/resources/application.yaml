@@ -1,8 +1,26 @@
 
-flyway:
-   url: "210.90.135.104"
-   port: 210.90.135.104
-   schema: DICT
+spring:
+   profiles:
+      active: default
+
+migration:
+   url: mo.avocadostudio.xyz
+   port: 3306
+   schema: dict
+   username: root
+   password: root
+   location: classpath:migration
+
+---
+
+spring:
+   profiles:
+      active: dev
+
+migration:
+   url: mo.avocadostudio.xyz
+   port: 3306
+   schema: dict
    username: root
    password: root
    location: classpath:migration

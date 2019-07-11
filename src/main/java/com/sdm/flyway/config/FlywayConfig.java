@@ -1,4 +1,4 @@
-package config;
+package com.sdm.flyway.config;
 
 import org.flywaydb.core.Flyway;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,22 +10,22 @@ import javax.annotation.PostConstruct;
 @Configuration
 public class FlywayConfig {
 
-    @Value("${flyway.url}")
+    @Value("${migration.url}")
     public String HOST;
 
-    @Value("${flyway.port}")
+    @Value("${migration.port}")
     public String PORT;
 
-    @Value("${flyway.schema}")
+    @Value("${migration.schema}")
     public String SCHEMA;
 
-    @Value("${flyway.username}")
+    @Value("${migration.username}")
     public String ID;
 
-    @Value("${flyway.password}")
+    @Value("${migration.password}")
     public String PW;
 
-    @Value("${flyway.location}")
+    @Value("${migration.location}")
     public String LOCATION;
 
     @PostConstruct
