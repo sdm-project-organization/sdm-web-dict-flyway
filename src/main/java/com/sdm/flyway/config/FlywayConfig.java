@@ -30,13 +30,12 @@ public class FlywayConfig {
 
     @PostConstruct
     public void init() {
-        System.out.println("flywayConfig init");
+        /*System.out.println("FlywayConfig init() call");*/
         getFlyway();
     }
 
     @Bean
     public Flyway getFlyway() {
-        System.out.println(HOST);
         Flyway flyway = new Flyway();
         flyway.setDataSource("jdbc:mysql://" + HOST + ":" + PORT + "/" + SCHEMA, ID, PW);
         flyway.setLocations(LOCATION);
