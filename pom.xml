@@ -7,7 +7,18 @@
     <groupId>com.sdm</groupId>
     <artifactId>dict-flyway</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <name>dict-flyway</name>
+
+    <!-- war -> need web dependency -->
+    <packaging>jar</packaging>
+    <description>desc...</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.6.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <properties>
         <flyway-core.version>5.2.1</flyway-core.version>
@@ -39,24 +50,33 @@
 
     </dependencies>
 
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--&lt;!&ndash; Flyway &ndash;&gt;-->
+            <!--<plugin>-->
+                <!--<groupId>org.flywaydb</groupId>-->
+                <!--<artifactId>flyway-maven-plugin</artifactId>-->
+                <!--<version>${flyway-core.version}</version>-->
+                <!--<configuration>-->
+                    <!--<url>jdbc:mysql://mo.avocadostudio.xyz:3306/dict?useSSL=false</url>-->
+                    <!--<user>root</user>-->
+                    <!--<password>root</password>-->
+                    <!--<locations>-->
+                        <!--<location>classpath:/db/migration</location>-->
+                    <!--</locations>-->
+                    <!--<schemas>-->
+                        <!--<schema>sdmB</schema>-->
+                    <!--</schemas>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
+
     <build>
         <plugins>
-            <!-- Flyway -->
             <plugin>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-maven-plugin</artifactId>
-                <version>${flyway-core.version}</version>
-                <configuration>
-                    <url>jdbc:mysql://localhost:3306/sdm?useSSL=false</url>
-                    <user>root</user>
-                    <password>root</password>
-                    <locations>
-                        <location>classpath:/db/migration</location>
-                    </locations>
-                    <schemas>
-                        <schema>sdmB</schema>
-                    </schemas>
-                </configuration>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
